@@ -14,6 +14,12 @@ class Category(MPTTModel):
         blank=True,
         verbose_name='Категория',
     )
+    image = models.ImageField(
+        upload_to='categories/',
+        blank=True,
+        null=True,
+        verbose_name='Картинка',
+    )
     
     def __str__(self):
         return self.title

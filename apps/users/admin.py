@@ -8,3 +8,4 @@ User = get_user_model()
 class UserAdmin(admin.ModelAdmin):
     list_display = ['username']
     search_fields = ['username']
+    

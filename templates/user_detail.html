@@ -1,0 +1,21 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+    {% include 'base/header.html' %}
+
+    <main>
+        
+            <h1 style="padding-bottom: 20px">{{ user.display_name }}</h1>
+
+            <div style="width: 100%">
+                <ul style="padding: 20px; display: flex">
+                    <li style="padding: 30px"><img src="{{ user.avatar.url }}" alt="" style="width: 300px; height: 300px"></li>
+                </ul>
+            </div>
+
+            <a href="{% url 'update_user' user.id %}">Обновить</a>
+    </main>
+
+    {% include 'base/footer.html' %}
+{% endblock %}
